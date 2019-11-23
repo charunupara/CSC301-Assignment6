@@ -1,1 +1,1 @@
-# CSC301-Assignment6
+# CSC301 - Assignment 6
