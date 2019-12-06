@@ -33,7 +33,7 @@ def create_flow(id):
    
     # create outgoing edges from source to random vertices
     for i in range(1, outgoing_source_edges):
-        G.add_edge(nodeList[0], nodeList[i], capacity=random.randint(1, max_capacity), flow=0)
+        G.add_edge(nodeList[0], nodeList[i], capacity=float(random.randint(1, max_capacity)))
         node_dict[(nodeList[0], nodeList[i])] = 0
 
     for i in range(1, len(nodeList)-1):
@@ -55,7 +55,7 @@ def create_flow(id):
             # Remove self-loop and antiparallel edges
             rev_tuple = (random_node, curr_node)
             if rev_tuple not in node_dict and rev_tuple[0] != rev_tuple[1] :
-                G.add_edge(curr_node, random_node, capacity=random.randint(1, max_capacity), flow=0)
+                G.add_edge(curr_node, random_node, capacity=float(random.randint(1, max_capacity)))
                 node_dict[valid_edge] = 0
             
                     
