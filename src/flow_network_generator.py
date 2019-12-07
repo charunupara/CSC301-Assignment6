@@ -11,7 +11,7 @@ max_capacity = 20
 def create_flow(id):
 
     # random number of nodes
-    order = random.randint(4,6)
+    order = random.randint(5,15)
 
 
     G = nx.DiGraph()
@@ -70,10 +70,12 @@ def create_flow(id):
     plt.savefig(r"C:\Users\Charun\Desktop\CSC301-Assignment6\input_graphs\input_" + str(id) + r".png")
     write_dot(G, r"C:\Users\Charun\Desktop\CSC301-Assignment6\input_graphs\input_" + str(id) + r".dot")
     plt.close()
+    output = G
     G.clear()
+    return output
+    
 
 
 
 
-for i in range(1, 11):
-    create_flow(i)
+
